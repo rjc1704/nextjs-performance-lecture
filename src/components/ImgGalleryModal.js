@@ -8,17 +8,26 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import "react-image-gallery/styles/css/image-gallery.css";
+import { getCloudinaryImgUrl } from "@/utils/cdnImage";
 
 export default function ImgGalleryModal({ isOpen, onOpenChange, images }) {
-  const IMG_WIDTH = 800;
-  const IMG_HEIGHT = 500;
-  const THUMBNAIL_IMG_WIDTH = 200;
-  const THUMBNAIL_IMG_HEIGHT = 130;
+  const IMG_WIDTH = 920;
+  const IMG_HEIGHT = 576;
+  const THUMBNAIL_IMG_WIDTH = 152;
+  const THUMBNAIL_IMG_HEIGHT = 98;
 
   const items = images.map((src) => {
     return {
-      original: src,
-      thumbnail: src,
+      original: getCloudinaryImgUrl({
+        width: IMG_WIDTH,
+        height: IMG_HEIGHT,
+        src,
+      }),
+      thumbnail: getCloudinaryImgUrl({
+        width: THUMBNAIL_IMG_WIDTH,
+        height: THUMBNAIL_IMG_HEIGHT,
+        src,
+      }),
     };
   });
 
@@ -29,7 +38,7 @@ export default function ImgGalleryModal({ isOpen, onOpenChange, images }) {
           <DialogTitle>이미지 갤러리</DialogTitle>
         </DialogHeader>
 
-        <div className="max-w-[400px]">
+        <div className="max-w-[460px]">
           <ImageGallery
             items={items}
             showPlayButton={false}
