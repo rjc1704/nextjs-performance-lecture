@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@import "react-image-gallery/styles/css/image-gallery.css";
+/* @font-face {
+  font-family: "SingleDay-Regular";
+  src: url("/src/assets/fonts/SingleDay-Regular.ttf"); */
+/* src:
+    url("/src/assets/fonts/subset-SingleDay-Regular.woff2") format("woff2"),
+    url("/src/assets/fonts/subset-SingleDay-Regular.woff") format("woff"),
+    url("/src/assets/fonts/subset-SingleDay-Regular.ttf") format("truetype");
+  font-display: fallback;
+}
+* {
+  font-family: "SingleDay-Regular";
+  box-sizing: border-box;
+}
+  */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
