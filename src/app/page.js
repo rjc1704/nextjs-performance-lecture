@@ -10,13 +10,13 @@ import { useDisclosure } from "@/hooks/useDisclosure";
 
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-material-ui-carousel";
-import ImgGalleryModal from "@/components/ImgGalleryModal";
+// import ImgGalleryModal from "@/components/ImgGalleryModal";
 import Image from "next/image";
 import { preloadImgs } from "@/utils/cdnImage";
-// import dynamic from "next/dynamic";
-// const ImgGalleryModal = dynamic(() => import("@/components/ImgGalleryModal"), {
-//   ssr: false,
-// });
+import dynamic from "next/dynamic";
+const ImgGalleryModal = dynamic(() => import("@/components/ImgGalleryModal"), {
+  ssr: false,
+});
 
 const IMG_WIDTH = 920;
 const IMG_HEIGHT = 576;
