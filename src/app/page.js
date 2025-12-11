@@ -22,11 +22,11 @@ export default function Home() {
   const { isOpen, onOpen, onToggle } = useDisclosure();
 
   // const preloadingImgs = [
-  //   { src: FIRST_IMG, width: 400, height: 250 },
-  //   { src: THUMB_IMG1, width: 100, height: 60 },
-  //   { src: THUMB_IMG2, width: 100, height: 60 },
-  //   { src: THUMB_IMG3, width: 100, height: 60 },
-  //   { src: THUMB_IMG4, width: 100, height: 60 },
+  //   { src: FIRST_IMG, width: 800, height: 500 },
+  //   { src: THUMB_IMG1, width: 200, height: 130 },
+  //   { src: THUMB_IMG2, width: 200, height: 130 },
+  //   { src: THUMB_IMG3, width: 200, height: 130 },
+  //   { src: THUMB_IMG4, width: 200, height: 130 },
   // ];
   return (
     <div className="w-[1200px] flex flex-col mx-auto">
